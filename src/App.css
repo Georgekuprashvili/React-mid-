@@ -1,0 +1,354 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.background {
+  height: 100%;
+  width: 483px;
+  background-color: #21092f;
+  position: relative;
+}
+.first_card {
+  width: 447px;
+  height: 245px;
+  border-radius: 10px;
+  background: linear-gradient(164deg, #6348fe 4.74%, #610595 88.83%);
+  position: absolute;
+  top: 155px;
+  left: 137px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.second_card {
+  width: 447px;
+  height: 245px;
+  border-radius: 10px;
+  background: linear-gradient(169deg, #fff 5%, #d2d3d9 91.69%);
+  position: absolute;
+  top: 426px;
+  left: 229px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.black_box {
+  width: 447px;
+  height: 54px;
+  background-color: #2f2f2f;
+}
+.cvv_box {
+  width: 361px;
+  height: 38px;
+  border-radius: 4px;
+  background-color: #adb5be;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 10px;
+  color: var(--White, #fff);
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card_number {
+  color: var(--White, #fff);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 3.422px;
+}
+.name_box {
+  display: flex;
+  gap: 196px;
+  align-items: center;
+}
+.name_p {
+  color: var(--White, #fff);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.month_p {
+  color: var(--White, #fff);
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.form {
+  width: 381px;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+.arrow_box {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #6348fe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.thank_box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  height: 291px;
+  gap: 40px;
+  display: none;
+}
+.thank_heading {
+  color: var(--Deep-Violet, #21092f);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 3.422px;
+}
+.thank_paragraph {
+  color: var(--Purplish-Grey, #8f8694);
+  text-align: center;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.continue_button {
+  width: 381px;
+  height: 53px;
+  border-radius: 8px;
+  background: var(--Deep-Violet, #21092f);
+  border: 0;
+  color: var(--White, #fff);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  cursor: pointer;
+}
+
+.params_cont {
+  display: flex;
+  gap: 20px;
+}
+.month_year_box {
+  display: flex;
+  gap: 10px;
+}
+.month {
+  width: 80px;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid var(--Light-Grey, #dfdee0);
+  background: var(--White, #fff);
+}
+.name {
+  width: 381px;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid var(--Light-Grey, #dfdee0);
+  background: var(--White, #fff);
+}
+.cvc {
+  width: 191px;
+  height: 45px;
+  border-radius: 8px;
+  border: 1px solid var(--Light-Grey, #dfdee0);
+  background: var(--White, #fff);
+}
+
+.code_box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.confirm {
+  width: 381px;
+  height: 53px;
+  border-radius: 8px;
+  background: var(--Deep-Violet, #21092f);
+  color: var(--White, #fff);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: 0;
+  cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input-error {
+  border: 1px solid red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+.form-hidden {
+  display: none;
+}
+
+.thank-box-visible {
+  display: flex;
+}
+@media (max-width: 1280px) {
+  #root {
+    flex-direction: column;
+  }
+}
+@media (max-width: 612px) {
+  #root {
+    justify-content: start;
+    gap: 170px;
+  }
+}
+@media (max-width: 1280px) {
+  .background {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 458px;
+  }
+  .first_card {
+    top: auto;
+    left: auto;
+    z-index: 1;
+    margin-right: 162px;
+    margin-top: 307px;
+  }
+  .second_card {
+    top: auto;
+    left: auto;
+  }
+  .form {
+    margin-bottom: 30px;
+  }
+  .thank_box {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 612px) {
+  .background {
+    height: 240px;
+  }
+  .second_card {
+    width: 286px;
+    height: 157px;
+  }
+  .black_box {
+    width: 286px;
+    height: 34.604px;
+  }
+  .cvv_box {
+    width: 230.975px;
+    height: 29.739px;
+  }
+  .first_card {
+    width: 285px;
+    height: 156.208px;
+    margin-right: 117px;
+    margin-top: 192px;
+    padding-left: 20px;
+  }
+  .photo2 {
+    width: 54px;
+    height: 30px;
+  }
+  .card_number {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+  }
+  .name_box {
+    gap: 124px;
+  }
+  .name_p {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.286px;
+  }
+  .month_p {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.286px;
+  }
+}
+@media (max-width: 401px) {
+  .first_card {
+    margin-right: 65px;
+  }
+  .form {
+    width: 327px;
+    align-items: center;
+  }
+  .continue_button {
+    width: 327px;
+  }
+}
+@media (max-width: 412px) {
+  .confirm {
+    width: 327px;
+    height: 53px;
+  }
+  .name {
+    width: 327px;
+    height: 45px;
+  }
+  .month {
+    width: 72px;
+    height: 45px;
+  }
+  .cvc {
+    width: 164px;
+    height: 45px;
+  }
+}
