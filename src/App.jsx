@@ -65,45 +65,41 @@ function App() {
     return "";
   }
 
-  function clearInput(e) {
-    e.target.value = "";
+  function handleNameChange(event) {
+    setCardholderName(event.target.value);
   }
 
-  function handleNameChange(e) {
-    setCardholderName(e.target.value);
-  }
-
-  function handleCardNumberChange(e) {
-    let value = e.target.value.replace(/\D/g, "").slice(0, 16);
+  function handleCardNumberChange(event) {
+    const value = event.target.value.replace(/\D/g, "").slice(0, 16);
     value = value.replace(/(.{4})(?=.)/g, "$1 ");
     setCardNumber(value);
   }
 
-  function handleExpMonthChange(e) {
-    setExpMonth(e.target.value);
+  function handleExpMonthChange(event) {
+    setExpMonth(event.target.value);
   }
 
-  function handleExpYearChange(e) {
-    setExpYear(e.target.value);
+  function handleExpYearChange(event) {
+    setExpYear(event.target.value);
   }
 
-  function handleCvvChange(e) {
-    setCvv(e.target.value);
+  function handleCvvChange(event) {
+    setCvv(event.target.value);
   }
 
   function validateForm() {
-    let nameError = validateCardholderName(cardholderName);
-    let cardError = validateCardNumber(cardNumber);
-    let expError = validateExpirationDate(expMonth, expYear);
-    let cvvError = validateCvv(cvv);
+    const nameError = validateCardholderName(cardholderName);
+    const cardError = validateCardNumber(cardNumber);
+    const expError = validateExpirationDate(expMonth, expYear);
+    const cvvError = validateCvv(cvv);
 
     setError({ nameError, cardError, expError, cvvError });
 
     return !nameError && !cardError && !expError && !cvvError;
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
+  function handleSubmit(event) {
+    event.preventDefault();
     if (validateForm()) {
       setFormSubmitted(true);
     }
@@ -151,7 +147,6 @@ function App() {
             placeholder="   e.g. Jane Appleseed"
             value={cardholderName}
             onChange={handleNameChange}
-            onFocus={clearInput}
             onBlur={() =>
               setError({
                 ...error,
@@ -171,7 +166,6 @@ function App() {
             placeholder="   e.g. 1234 5678 9123 0000"
             value={cardNumber}
             onChange={handleCardNumberChange}
-            onFocus={clearInput}
             onBlur={() =>
               setError({ ...error, cardError: validateCardNumber(cardNumber) })
             }
@@ -190,7 +184,6 @@ function App() {
                 placeholder="   MM"
                 value={expMonth}
                 onChange={handleExpMonthChange}
-                onFocus={clearInput}
                 onBlur={() =>
                   setError({
                     ...error,
@@ -204,7 +197,6 @@ function App() {
                 placeholder="   YY"
                 value={expYear}
                 onChange={handleExpYearChange}
-                onFocus={clearInput}
                 onBlur={() =>
                   setError({
                     ...error,
@@ -225,7 +217,6 @@ function App() {
               placeholder="   e.g. 123"
               value={cvv}
               onChange={handleCvvChange}
-              onFocus={clearInput}
               onBlur={() => setError({ ...error, cvvError: validateCvv(cvv) })}
             />
             {error?.cvvError && (
