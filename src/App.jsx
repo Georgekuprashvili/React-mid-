@@ -88,10 +88,10 @@ function App() {
   }
 
   function validateForm() {
-    const nameError = validateCardholderName(cardholderName);
-    const cardError = validateCardNumber(cardNumber);
-    const expError = validateExpirationDate(expMonth, expYear);
-    const cvvError = validateCvv(cvv);
+    let nameError = validateCardholderName(cardholderName);
+    let cardError = validateCardNumber(cardNumber);
+    let expError = validateExpirationDate(expMonth, expYear);
+    let cvvError = validateCvv(cvv);
 
     setError({ nameError, cardError, expError, cvvError });
 
