@@ -65,26 +65,26 @@ function App() {
     return "";
   }
 
-  function handleNameChange(event) {
+  function NameChange(event) {
     setCardholderName(event.target.value);
   }
 
-  function handleCardNumberChange(event) {
+  function CardNumberChange(event) {
     const value = event.target.value.replace(/\D/g, "").slice(0, 16);
     value = value.replace(/(.{4})(?=.)/g, "$1 ");
     setCardNumber(value);
   }
 
-  function handleExpMonthChange(event) {
-    setExpMonth(event.target.value);
+  function ExpMonthChange(e) {
+    setExpMonth(e.target.value);
   }
 
-  function handleExpYearChange(event) {
-    setExpYear(event.target.value);
+  function ExpYearChange(e) {
+    setExpYear(e.target.value);
   }
 
-  function handleCvvChange(event) {
-    setCvv(event.target.value);
+  function CvvChange(e) {
+    setCvv(e.target.value);
   }
 
   function validateForm() {
@@ -98,14 +98,14 @@ function App() {
     return !nameError && !cardError && !expError && !cvvError;
   }
 
-  function handleSubmit(event) {
+  function Submit(event) {
     event.preventDefault();
     if (validateForm()) {
       setFormSubmitted(true);
     }
   }
 
-  function handleContinue() {
+  function Continue() {
     window.location.reload();
   }
 
@@ -137,7 +137,7 @@ function App() {
 
       <form
         className={`form ${formSubmitted ? "form-hidden" : ""}`}
-        onSubmit={handleSubmit}
+        onSubmit={Submit}
       >
         <div className="code_box">
           <div className="paragraph">CARDHOLDER NAME</div>
@@ -146,7 +146,7 @@ function App() {
             type="text"
             placeholder="   e.g. Jane Appleseed"
             value={cardholderName}
-            onChange={handleNameChange}
+            onChange={NameChange}
             onBlur={() =>
               setError({
                 ...error,
@@ -165,7 +165,7 @@ function App() {
             type="text"
             placeholder="   e.g. 1234 5678 9123 0000"
             value={cardNumber}
-            onChange={handleCardNumberChange}
+            onChange={CardNumberChange}
             onBlur={() =>
               setError({ ...error, cardError: validateCardNumber(cardNumber) })
             }
@@ -183,7 +183,7 @@ function App() {
                 type="number"
                 placeholder="   MM"
                 value={expMonth}
-                onChange={handleExpMonthChange}
+                onChange={ExpMonthChange}
                 onBlur={() =>
                   setError({
                     ...error,
@@ -196,7 +196,7 @@ function App() {
                 type="number"
                 placeholder="   YY"
                 value={expYear}
-                onChange={handleExpYearChange}
+                onChange={ExpYearChange}
                 onBlur={() =>
                   setError({
                     ...error,
@@ -216,7 +216,7 @@ function App() {
               type="number"
               placeholder="   e.g. 123"
               value={cvv}
-              onChange={handleCvvChange}
+              onChange={CvvChange}
               onBlur={() => setError({ ...error, cvvError: validateCvv(cvv) })}
             />
             {error?.cvvError && (
@@ -235,7 +235,7 @@ function App() {
           <h1 className="thank_heading">THANK YOU!</h1>
           <p className="thank_paragraph">We’ve added your card details</p>
         </div>
-        <button className="continue_button" onClick={handleContinue}>
+        <button className="continue_button" onClick={Continue}>
           Continue
         </button>
       </div>
