@@ -70,7 +70,7 @@ function App() {
   }
 
   function CardNumberChange(event) {
-    const value = event.target.value.replace(/\D/g, "").slice(0, 16);
+    let value = event.target.value.replace(/\D/g, "").slice(0, 16);
     value = value.replace(/(.{4})(?=.)/g, "$1 ");
     setCardNumber(value);
   }
