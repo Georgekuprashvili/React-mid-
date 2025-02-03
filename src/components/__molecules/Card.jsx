@@ -1,7 +1,7 @@
 import "../../App.css";
 import photo2 from "../../assets/Group 8 (2).svg";
 import photo1 from "../../assets/Group 15.svg";
-import "../__molecules/Card.css";
+import "../__molecules/card.css";
 import "../responssive/responsive.css";
 
 function Card({ cardNumber, cardholderName, expMonth, expYear, cvv }) {
