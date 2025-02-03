@@ -1,0 +1,88 @@
+@media (max-width: 1280px) {
+  #root {
+    flex-direction: column;
+  }
+}
+@media (max-width: 612px) {
+  #root {
+    justify-content: start;
+    gap: 170px;
+  }
+}
+@media (max-width: 1280px) {
+  .background {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 458px;
+  }
+  .first_card {
+    top: auto;
+    left: auto;
+    z-index: 1;
+    margin-right: 162px;
+    margin-top: 307px;
+  }
+  .second_card {
+    top: auto;
+    left: auto;
+  }
+  .form {
+    margin-bottom: 30px;
+  }
+  .thank_box {
+    margin-bottom: 50px;
+  }
+}
+@media (max-width: 612px) {
+  .background {
+    height: 240px;
+  }
+  .second_card {
+    width: 286px;
+    height: 157px;
+  }
+  .black_box {
+    width: 286px;
+    height: 34.604px;
+  }
+  .cvv_box {
+    width: 230.975px;
+    height: 29.739px;
+  }
+  .first_card {
+    width: 285px;
+    height: 156.208px;
+    margin-right: 117px;
+    margin-top: 192px;
+    padding-left: 20px;
+  }
+  .photo2 {
+    width: 54px;
+    height: 30px;
+  }
+  .card_number {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 2.2px;
+  }
+  .name_box {
+    gap: 124px;
+  }
+  .name_p {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.286px;
+  }
+  .month_p {
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 1.286px;
+  }
+}
+@media (max-width: 401px) {
+  .first_card {
+    margin-right: 65px;
+  }
+}

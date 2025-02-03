@@ -1,0 +1,95 @@
+.background {
+  height: 100%;
+  width: 483px;
+  background-color: #21092f;
+  position: relative;
+}
+.first_card {
+  width: 447px;
+  height: 245px;
+  border-radius: 10px;
+  background: linear-gradient(164deg, #6348fe 4.74%, #610595 88.83%);
+  position: absolute;
+  top: 155px;
+  left: 137px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.second_card {
+  width: 447px;
+  height: 245px;
+  border-radius: 10px;
+  background: linear-gradient(169deg, #fff 5%, #d2d3d9 91.69%);
+  position: absolute;
+  top: 426px;
+  left: 229px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.black_box {
+  width: 447px;
+  height: 54px;
+  background-color: #2f2f2f;
+}
+.cvv_box {
+  width: 361px;
+  height: 38px;
+  border-radius: 4px;
+  background-color: #adb5be;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 10px;
+  color: var(--White, #fff);
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card_number {
+  color: var(--White, #fff);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 3.422px;
+}
+.name_box {
+  display: flex;
+  gap: 196px;
+  align-items: center;
+}
+.name_p {
+  color: var(--White, #fff);
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.month_p {
+  color: var(--White, #fff);
+  text-align: right;
+  font-feature-settings: "liga" off, "clig" off;
+  font-family: "Space Grotesk";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
